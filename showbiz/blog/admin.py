@@ -31,10 +31,6 @@ class CategorieAdmin(admin.ModelAdmin):
 
 
 
-
-
-   
-
 class TagAdmin(admin.ModelAdmin):
     list_display = (
         'titre',

@@ -1,0 +1,35 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="col-md-3">
+    <div class="widget posts-widget">
+        <h1>Random Post</h1>
+
+        
+        {% for rd   in rand %}
+            
+       
+            
+        <ul class="list-posts">
+            <li>
+                <img src="{{rd.cover.url}}" alt="">
+                <div class="post-content">
+                    <a href="travel.html">
+                    {% for td in rd.tags.all %}
+                        {{td}}
+                    {% endfor %}
+                        </a>
+                    <h2><a href="{% url 'blog:singpost' rd.titre_slug %}">{{rd.titre}}. </a></h2>
+                    <ul class="post-tags">
+                        <li><i class="fa fa-clock-o"></i>{{rd.date_add}}</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+
+{ % endblock content % }

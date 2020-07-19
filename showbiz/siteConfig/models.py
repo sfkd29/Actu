@@ -33,4 +33,24 @@ class Contact(models.Model):
         return self.nom
 
 
+class Breaking(models.Model):
+    """Model definition for Breaking."""
+
+    # TODO: Define fields here
+    heure = models.CharField( null=True, blank=True, max_length=50)
+    annonce = models.CharField(max_length=50,null=True, blank=True)
+
+    status = models.BooleanField(default=True)
+    date_add = models.DateTimeField(auto_now_add=True)
+    date_update = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        """Meta definition for Breaking."""
+
+        verbose_name = 'Breaking'
+        verbose_name_plural = 'Breakings'
+
+    def __str__(self):
+        """Unicode representation of Breaking."""
+        return self.annonce
 
