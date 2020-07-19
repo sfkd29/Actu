@@ -5,8 +5,6 @@ from django.utils.safestring import mark_safe
 # Register your models here.
 
 
-
-
 class CategorieAdmin(admin.ModelAdmin):
     list_display = (
         'titre',
@@ -30,6 +28,8 @@ class CategorieAdmin(admin.ModelAdmin):
         ('Info ', {'fields': ['titre', ]}),
         ('Status et Activations', {'fields': ['status', ]}),
     ]
+
+
 
 
 

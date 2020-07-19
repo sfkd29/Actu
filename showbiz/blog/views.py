@@ -13,7 +13,7 @@ def blog(request: HttpRequest) -> HttpResponse:
     return render(request,'pages/index.html',data)
 
 
-def single_blog(request: HttpRequest, titre_slug: str) -> HttpResponse:
+def single_post(request: HttpRequest, titre_slug: str) -> HttpResponse:
     data = {
 
     }
