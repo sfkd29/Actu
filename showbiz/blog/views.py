@@ -7,7 +7,7 @@ import random
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 
-def blog(request: HttpRequest) -> HttpResponse:
+def index(request: HttpRequest) -> HttpResponse:
 
     pub = models.Article.objects.filter(status=True)
     paginator = Paginator(pub, 9)

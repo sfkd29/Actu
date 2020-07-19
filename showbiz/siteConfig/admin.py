@@ -54,7 +54,8 @@ class BreakingAdmin(admin.ModelAdmin):
         'date_update',
     )
     search_fields = (
-        'date_add'
+        'annonce',
+        'status'
     )
     list_per_pages = 50
     date_hierarchy = 'date_add'

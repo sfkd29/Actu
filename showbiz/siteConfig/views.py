@@ -4,4 +4,10 @@ from django.http.response import HttpResponse
 from django.http.request import HttpRequest
 from . import models
 
-# Create your views here.
+# Create your views
+
+def index(request: HttpRequest) -> HttpResponse:
+    data = {
+
+    }
+    return render(request,'pages/index.html',data) 
