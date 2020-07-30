@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'admin_interface',
     'colorfield',
+    'rest_framework',
 
     #My Apps
     'blog.apps.BlogConfig',
