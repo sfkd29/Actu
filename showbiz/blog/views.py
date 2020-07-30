@@ -5,6 +5,7 @@ from django.http.request import HttpRequest
 from . import models
 import random
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from showbiz.siteConfig import models
 # Create your views here.
 
 def index(request: HttpRequest) -> HttpResponse:
@@ -38,3 +39,16 @@ def single_post(request: HttpRequest, titre_slug: str) -> HttpResponse:
     }
     return render(request,'pages/blog/single-post.html',data)
 
+
+def fap(request: HttpRequest) -> HttpResponse:
+    val=models.Article.objects.filter(status=True)
+    data = {
+        'articles' : [ {
+            'id'=i.id,
+            'titre'=i.titre,
+            'slug'=i.titre_slug
+
+        } for i in val]
+
+    }
+    return JsonResponse(data,safe=False)

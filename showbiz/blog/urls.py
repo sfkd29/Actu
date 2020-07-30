@@ -18,4 +18,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('<slug:titre_slug>/',views.single_post, name='singpost'),
     path('api/',include('blog.apiurls'))
+    path('fap/', views.fap, name='fap')
 ]

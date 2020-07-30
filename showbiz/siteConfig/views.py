@@ -11,3 +11,11 @@ def index(request: HttpRequest) -> HttpResponse:
 
     }
     return render(request,'pages/index.html',data) 
+
+
+
+def fap(request: HttpRequest) -> HttpResponse:
+    data = {
+
+    }
+    return JsonResponse(data,safe=False)
