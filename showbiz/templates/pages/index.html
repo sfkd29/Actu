@@ -1,6 +1,12 @@
 {% extends 'bases/base.html' %}
 {% load static %}
 
+
+{% block vueCdn %}
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+{% endblock vueCdn %}
+	
+
 {% block content %}
 
 		{% include 'includes/break.html' %}
@@ -732,3 +738,17 @@
 		<!-- End block-wrapper-section -->
 
 { % endblock content % }
+
+
+{% block vue %}
+
+<script>
+	app=new Vue({
+
+	})
+</script>
+	
+{% endblock vue %}
+
+
+	

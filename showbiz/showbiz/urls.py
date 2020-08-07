@@ -25,6 +25,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('siteConfig/', include('siteConfig.urls')),
     path('admin/filebrowser/', site.urls),
+    path('api/',include('apiApp.urls'))
 ]
 
 
