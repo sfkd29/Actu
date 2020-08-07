@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     #My Apps
     'blog.apps.BlogConfig',
     'siteConfig.apps.SiteconfigConfig',
-    'apiapp.apps.ApiConfig'
+    
 ]
 
 MIDDLEWARE = [
