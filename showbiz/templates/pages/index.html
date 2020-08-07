@@ -4,6 +4,7 @@
 
 {% block vueCdn %}
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 {% endblock vueCdn %}
 	
 
@@ -744,11 +745,21 @@
 
 <script>
 	app=new Vue({
+		ell :"#app",
+		data:{
+		articles:[],
+		base_url: window.location.protocol + "//" + window.location.host
+		},
+		delimiters : ["${" , "}"],
 
+		methods: {
+		getArticles :function(){
+			'/api/articles/?format=json'
+		},
+		}
 	})
 </script>
 	
 {% endblock vue %}
 
 
-	
