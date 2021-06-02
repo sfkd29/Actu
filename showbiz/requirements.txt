@@ -8,7 +8,7 @@ Pillow==6.2.1
 pytz==2019.3
 requests==2.23.0
 sqlparse==0.3.1
-urllib3==1.25.9
+urllib3==1.26.5
 django-debug-toolbar
 djangorestframework == 3.11.0
 django-filter == 2.3.0
